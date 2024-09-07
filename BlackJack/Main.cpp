@@ -1,8 +1,18 @@
+#pragma once
 #include <iostream>
 #include "Player.h"
 #include "BlackjackManager.h"
 #define INITIAL_CREDIT 1000
 using namespace std;
+
+
+#include "Deck.h" // 테스트용 헤더 포함
+void TestCode()
+{
+	Deck d;
+	d.Test();
+}
+
 int main()
 {
 	cout << "Welcome to JW's Minigame Heaven!\n\n\n";
@@ -10,6 +20,11 @@ int main()
 	cout << "Enter your name: ";
 	string inName;
 	cin >> inName;
+	if (inName == "TEST") // 이름 입력이 TEST면 TestCode 실행 후 종료
+	{
+		TestCode();
+		return 0;
+	}
 	Player player(move(inName), INITIAL_CREDIT);
 	
 	cout << "Welcome " << player.getName() << "!\n"
