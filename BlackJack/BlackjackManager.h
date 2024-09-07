@@ -18,4 +18,3 @@ private:
 	void ShowInterface(const Player& player, int& playerSelection) override;
 	void ChangeState(const int& playerSelection);
 };
-
