@@ -7,7 +7,7 @@ class BlackjackManager : public GameManager // public 상속은 base class의 멤버들
 public:
 	enum class BlackjackGameState
 	{
-		Idle, Bet, ShuffleDeck, DistributeCard, Action, DealerPlay, Adjustment 
+		Idle, Bet, ShuffleDeck, DistributeCard, DoubleDown, Action, DealerPlay, Adjustment 
 	};
 	void PlayGame(Player& player) override;
 
@@ -17,4 +17,5 @@ private:
 
 	void ShowInterface(const Player& player, int& playerSelection) override;
 	void ChangeState(const int& playerSelection);
+	void PlayAction(const int& playerSelection);
 };

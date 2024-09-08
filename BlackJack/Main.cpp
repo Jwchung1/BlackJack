@@ -10,7 +10,9 @@ using namespace std;
 void TestCode()
 {
 	Deck d;
-	d.Test();
+	d.PrintDeck();
+	d.Shuffle();
+	d.PrintDeck();
 }
 
 int main()

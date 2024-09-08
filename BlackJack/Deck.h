@@ -22,13 +22,8 @@ public:
 		}
 	}
 	void Shuffle();
-	void Test()
-	{
-		for (auto card : mCards)
-		{
-			cout << card.getSymbol() << ", " << card.getNumber() << "\n";
-		}
-	}
+	void PrintDeck();
+	
 private:
 	vector<Card> mCards;
 };
