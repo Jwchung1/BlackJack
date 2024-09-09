@@ -54,6 +54,7 @@ void BlackjackManager::ShowInterface(const Player& player, int& playerSelection)
 		cin.clear(); // cin 상태 플래그 초기화
 		cin.ignore(10000, '\n'); // 입력 버퍼에 남아 있는 잘못된 데이터 무시 (10000자리까지 '\n'가 나오기 전까지 데이터 무시)
 	}
+	// TODO: 범위 벗어나는 예외처리
 }
 
 void BlackjackManager::ChangeState(const int& playerSelection)
